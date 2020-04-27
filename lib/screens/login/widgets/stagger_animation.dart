@@ -31,9 +31,11 @@ class StaggerAnimation extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(bottom: 50, top: 50),
       child: InkWell(
-          onTap: () {
-            controller.forward();
-          },
+        onTap: () {
+          controller.forward();
+        },
+        child: Hero(
+          tag: "fade",
           child: buttonZoomOut.value <= 60.0
               ? Container(
                   width: buttonSqueeze.value,
@@ -55,7 +57,9 @@ class StaggerAnimation extends StatelessWidget {
                       shape: (buttonZoomOut.value < 500.0)
                           ? BoxShape.circle
                           : BoxShape.rectangle),
-                )),
+                ),
+        ),
+      ),
     );
   }
 
