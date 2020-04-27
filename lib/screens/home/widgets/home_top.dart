@@ -1,3 +1,4 @@
+import 'package:advanced_animations/screens/home/widgets/category_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeTop extends StatelessWidget {
@@ -51,7 +52,8 @@ class HomeTop extends StatelessWidget {
                     shape: BoxShape.circle,
                     color: Color.fromRGBO(80, 210, 194, 1.0)),
               ),
-            )
+            ),
+            CategoryView()
           ],
         ),
       ),
